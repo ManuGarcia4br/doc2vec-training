@@ -24,26 +24,3 @@ Esse script faz as seguintes suposições:
 
 Gera embeddings para um corpus pré-processado a partir de um modelo doc2vec.
 
-## Para corpus Wikipedia
-
-### wiki\_downloader.py
-
-Baixa o dump no formato bz2, extrai para xml, e roda o utils/WikiExtractor.py para gerar os arquivos de texto. Cada arquivo contem mais de um documento, separados em blocos:
-
-    <doc id="1" ... >
-    conteudo do documento
-    </doc>
-    <doc id="2" ... >
-    conteudo do proximo documento
-    </doc>
-    ...
-
-Por isso, é necessário separar cada documento em um arquivo ou remover as tags XML dependendo do que se quer fazer.
-
-### wiki\_remove\_tags.py
-
-Remove as tags XML dos arquivos da Wikipédia. Use esse se for treinar o modelo, mas não for usar os embeddings dos artigos da Wikipédia em si.
-
-### wiki\_split\_docs.py
-
-Separa cada artigo em seu próprio arquivo.
