@@ -1,4 +1,4 @@
-# word2vec-training
+# Doc2vec-training
 ## Para Doc2Vec
 
 ### Modos de treino
